@@ -11,8 +11,8 @@ datasource db {
 }
 
 model Comment {
-  id        String @id @default(uuid())
+  id        String   @id @default(uuid())
   message   String
   movieId   String
-  createdAt String
+  createdAt DateTime @default(now())
 }
